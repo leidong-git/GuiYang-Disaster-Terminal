@@ -1,0 +1,162 @@
+.content {
+	width: 100%;
+	height: 100vh;
+	background: url('../../static/images/login/login_bg.png') no-repeat;
+	background-size: cover;
+	background-position: 50% 50%;
+}
+
+.header {
+	width: 100%;
+	height: 180rpx;
+	padding: 20rpx 60rpx;
+	box-sizing: border-box;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.header .header_time {
+	font-size: 32rpx;
+	color: #fff;
+}
+
+.header .header_name {
+	width: 1000rpx;
+	height: 100rpx;
+}
+
+.header .header_user {
+	font-size: 32rpx;
+	color: #fff;
+}
+
+.index_cont {
+	width: calc(100% - 120rpx);
+	height: calc(100% - 240rpx);
+	margin: 0rpx 60rpx 60rpx 60rpx;
+	box-sizing: border-box;
+	background: #fff;
+	border-radius: 20rpx;
+	display: flex;
+	justify-content: space-between;
+}
+
+.map_cont {
+	width: calc(100% - 970rpx);
+	height: 100%;
+	background: #f00;
+	border-top-left-radius: 20rpx;
+	border-bottom-left-radius: 20rpx;
+}
+
+.index_action {
+	width: 970rpx;
+	height: 100%;
+	background: #fff;
+	border-top-right-radius: 20rpx;
+	border-bottom-right-radius: 20rpx;
+	box-shadow: -20rpx 0px 20rpx -20rpx rgba(0, 0, 0, 0.4);
+}
+
+.active_title {
+	width: 100rpx;
+	height: 100%;
+	writing-mode: vertical-lr;
+	letter-spacing: 10rpx;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 35rpx;
+	color: #fff;
+}
+
+.action_actually {
+	width: 100%;
+	height: 380rpx;
+	display: flex;
+	justify-content: space-between;
+	border-bottom: 4rpx solid #fff;
+	box-sizing: border-box;
+	background: #eafbff;
+	border-top-right-radius: 20rpx;
+}
+
+.action_actually .active_title {
+	border-top-right-radius: 20rpx;
+	background-image: linear-gradient(to top, #1ED0AD, #31C1D3);
+}
+
+.action_precipitation {
+	width: 100%;
+	height: 600rpx;
+	display: flex;
+	justify-content: space-between;
+	border-bottom: 4rpx solid #fff;
+	box-sizing: border-box;
+	background: #eff9ff;
+}
+
+.action_precipitation .active_title {
+	background-image: linear-gradient(to top, #30DAFF, #00A8FF);
+}
+
+.action_prediction {
+	width: 100%;
+	height: 654rpx;
+	display: flex;
+	justify-content: space-between;
+	background: #f9fbff;
+	border-bottom-right-radius: 20rpx;
+}
+
+.action_prediction .action_nav {
+	width: 100rpx;
+	height: 100%;
+}
+
+.action_nav .action_title {
+	width: 100%;
+	height: 50%;
+	background: #92aaeb;
+	color: rgba(255, 255, 255, 0.5);
+	writing-mode: vertical-lr;
+	letter-spacing: 10rpx;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 35rpx;
+}
+
+.action_nav .action_title:last-child {
+	border-bottom-right-radius: 20rpx;
+}
+
+.action_nav .active {
+	background: #6688e2;
+	color: #fff;
+	width: 100%;
+	height: 50%;
+	writing-mode: vertical-lr;
+	letter-spacing: 10rpx;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 35rpx;
+	position: relative;
+	cursor: pointer;
+}
+
+.action_nav .active::before {
+	content: '';
+	width: 0;
+	height: 0;
+	border-top: 30rpx solid transparent;
+	border-right: 30rpx solid transparent;
+	border-left: 30rpx solid #6688e2;
+	position: absolute;
+	top: 50%;
+	left: -18rpx;
+	margin-top: -10rpx;
+	transform: rotate(45deg);
+}

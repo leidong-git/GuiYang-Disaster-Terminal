@@ -3,7 +3,7 @@
 export class Mcaptcha {
 	constructor(options) {
 		this.options = options;
-		this.fontSize = options.height * 3 / 2;
+		this.fontSize = options.height;
 		this.init();
 		this.refresh();
 	}
@@ -26,31 +26,33 @@ export class Mcaptcha {
 		if (arr.length === 0) {
 			arr = ['e', 'r', 'r', 'o', 'r'];
 		};
-		let offsetLeft = this.options.width * 0.6 / (arr.length - 1);
-		let marginLeft = this.options.width * 0.2;
+		let offsetLeft = this.options.width * 1 / (arr.length - 1);
+		let marginLeft = this.options.width * 0.5;
 		arr.forEach((item, index) => {
 			this.ctx.setFillStyle(this.randomColor(0, 180));
 			let size = this.randomNum(24, this.fontSize);
 			this.ctx.setFontSize(size);
 			let dis = offsetLeft * index + marginLeft - size * 0.3;
 			let deg = this.randomNum(-30, 30);
-			this.ctx.translate(dis, this.options.height * 0.5);
+			this.ctx.translate(dis, this.options.height * 0.8);
 			this.ctx.rotate(deg * Math.PI / 180);
 			this.ctx.fillText(item, 0, 0);
 			this.ctx.rotate(-deg * Math.PI / 180);
-			this.ctx.translate(-dis, -this.options.height * 0.5);
+			this.ctx.translate(-dis, -this.options.height * 0.8);
 		})
 		for (var i = 0; i < 4; i++) {
 			this.ctx.strokeStyle = this.randomColor(40, 180);
 			this.ctx.beginPath();
-			this.ctx.moveTo(this.randomNum(0, this.options.width), this.randomNum(0, this.options.height));
-			this.ctx.lineTo(this.randomNum(0, this.options.width), this.randomNum(0, this.options.height));
+			this.ctx.moveTo(this.randomNum(0, this.options.width * 2), this.randomNum(0, this.options.height * 2));
+			this.ctx.lineTo(this.randomNum(0, this.options.width * 2), this.randomNum(0, this.options.height * 2));
 			this.ctx.stroke();
 		}
 		for (var i = 0; i < this.options.width / 4; i++) {
 			this.ctx.fillStyle = this.randomColor(0, 255);
 			this.ctx.beginPath();
-			this.ctx.arc(this.randomNum(0, this.options.width), this.randomNum(0, this.options.height), 1, 0, 2 *
+			this.ctx.arc(this.randomNum(2, this.options.width * 2), this.randomNum(2, this.options.height * 1), 1,
+				1,
+				2 *
 				Math.PI);
 			this.ctx.fill();
 		}
